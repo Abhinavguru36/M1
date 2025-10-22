@@ -222,8 +222,41 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int m1,m2,m3;
+    float tot,per;
+    printf("Enter marks for Three(3) subjects:\n");
+    scanf("%d %d %d",&m1,&m2,&m3);
+    tot=(float)m1+m2+m3;
+    per=(float)tot/3;
+    printf("The total marks is: %.2f, and the Percetnage is: %.2f\n",tot,per);
+    if(m1>=40 && m2>=40 && m3>=40){
+        if(per>=60){
+            printf("Division = First");
+        }
+        else if(per>=48){
+            printf("Division = Second");
+        }
+        else if(per>=36){
+            printf("Division = Pass");
+        }
+        else{
+            printf("Division = Fail");
+        }
+    }else{
+        printf("Marks are not sufficient");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+<img width="1146" height="435" alt="image" src="https://github.com/user-attachments/assets/3c9865b4-e0e5-4a8c-bf83-baf575cd148b" />
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
